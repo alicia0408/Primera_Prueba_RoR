@@ -3,7 +3,7 @@ class TodosController < ApplicationController
     
     def index
         @todos = Todo.all
-        render :index
+        
     end
    
     def new
@@ -34,8 +34,8 @@ class TodosController < ApplicationController
   end
 
   def complete
-    @completed = true
-    @completed.save
+    @todo.completed = true
+    @todo.save
     redirect_to todos_path
   end
      
