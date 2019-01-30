@@ -1,13 +1,12 @@
-<p id="notice"><%= notice %></p>
 
+<h1>Description: </h1>
 <p>
-  <strong>Description:</strong>
-  <%= @todo.description %>
+  <%= @todo.description, %>
 </p>
 
+<h2> Completed</h2>
 <p>
-  <strong>Completed:</strong>
-  <%= @todo.completed %>
+   <%=@todo.completed %>
 </p>
 
 <%= link_to 'Edit', edit_todo_path(@todo) %> |
