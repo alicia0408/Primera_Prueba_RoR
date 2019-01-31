@@ -1,5 +1,31 @@
- <ul class="nav nav-pills navbar-fixed-top">
-      <li role="presentation" class="active"><a href="<%=todos_new_path%>">Index</a></li>
-      <li role="presentation"><a href="<%=todos_list_url%>">List</a></li>
-      <li role="presentation"><a href="<%=todos_url%>">New ToDo</a></li>
-    </ul>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+ </head>
+ <body>
+  <header>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="<%=todos_path%>">Index</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li ><a href="<%=todos_list_url%>">List<span class="sr-only">(current)</span></a></li>
+            <li> <a href="<%=todos_new_url%>">New ToDo</a></li>
+  </header>
+ </body>
+ </html>

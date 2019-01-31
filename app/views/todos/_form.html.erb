@@ -1,20 +1,33 @@
 
-<div class = "well">
-<%= form_with(model: todo, local: true) do |form| %>
-  
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :completed %>
-    <%= form.check_box :completed %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formulario</title>
+</head>
+<body>
+  <div class = "well">
+  <div class="form-horizontal">
+    <%= form_with(model: todo, local: true , class: 'form-group') do |form| %>
+      
+    
+      <div class="field">
+        <%= form.label :description, for:'inputext3'%>
+        <%= form.text_field :description, class: 'form-control' %>
+      </div>
+    
+      <div class="field">
+        <%= form.label :completed %>
+        <%= form.check_box :completed %>
+      </div>
+    
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    <% end %>
+    </div>
+    </div >
+</body>
+</html>
