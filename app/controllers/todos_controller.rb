@@ -3,7 +3,7 @@ class TodosController < ApplicationController
     
     def index
         @todos = Todo.all
-        
+        render :index
     end
    
     def new
@@ -12,6 +12,7 @@ class TodosController < ApplicationController
     
     def create
      @todo = Todo.new(todo_params)
+    
     @todo.save
         redirect_to todos_path
     end
@@ -40,15 +41,18 @@ class TodosController < ApplicationController
   end
      
   def list
-    @todos = Todos.all
+    @todos = Todo.all
+    @completed = Todo.where(completed: true)
+    @oncompleted = Todo.where(completed: false)
   end
- private
+
+  private
     def todo_params
         params.require(:todo).permit(:description, :completed)
     end
     
     def find_todo
-        @todo =  Todo.find(params[:id])
+        @todo = Todo.find(params[:id])
   end
     
 end

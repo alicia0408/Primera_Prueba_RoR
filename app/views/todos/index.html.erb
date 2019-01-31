@@ -18,8 +18,8 @@
         <td><%= todo.description %></td>
         <td><%= todo.completed %></td>
 
-        <td><%= link_to 'Mostrar', todo %></td>
-        <td><%= link_to 'Editar', edit_todo_path(todo) %></td>
+        <td><%= link_to 'Mostrar', todos_path%></td>
+        <td><%= link_to 'Editar', edit_todo_path(todo)%></td>
         <td><%= link_to 'Borrar', todo, method: :delete%></td>
      <td> <%= link_to 'completar', complete_path(todo)%></td>
 
@@ -30,5 +30,5 @@
 
 <br>
 
-<%= link_to 'Crear ToDo', new_todo_path %>
+<%= link_to 'Crear ToDo', todos_new_path %>
 </div>
