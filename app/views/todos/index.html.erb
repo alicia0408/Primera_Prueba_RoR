@@ -1,9 +1,9 @@
 
 
 <div class="well">
-<h1>Todos</h1>
+<h1>  Lista de tareas</h1>
 
-<table>
+<table class= "table table-hover">
   <thead>
     <tr>
       <th>Description</th>
@@ -12,16 +12,16 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody >
     <% @todos.each do |todo| %>
-      <tr>
-        <td><%= todo.description %></td>
+      <tr class ="info">
+        <td ><%= todo.description %></td>
         <td><%= todo.completed %></td>
 
         <td><%= link_to 'Mostrar', todos_path, class: 'btn btn-info'%></td>
         <td><%= link_to 'Editar', edit_todo_path(todo),  class:'btn btn-warning'%></td>
-        <td><%= link_to 'Borrar', todo, method: :delete, class: 'btn btn-primary'%></td>
-     <td> <%= link_to 'completar', complete_path(todo), class: 'btn btn-danger'%></td>
+        <td><%= link_to 'Borrar', todo, method: :delete, class: 'btn btn-danger'%></td>
+     <td> <%= link_to 'completar', complete_path(todo), class: 'btn btn-primary'%></td>
  
       </tr>
     <% end %>
